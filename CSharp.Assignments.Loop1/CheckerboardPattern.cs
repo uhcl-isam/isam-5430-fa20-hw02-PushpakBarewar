@@ -26,11 +26,21 @@ namespace CSharp.Assignments.Loop1
         public static void Main()
         {
             Console.Write("Enter the number of rows: ");
-            int num = int.Parse(Console.ReadLine());
+            int n = int.Parse(Console.ReadLine());
             Console.WriteLine("Enter the fill character: ");
-            char fillChar = Char.Parse(Console.ReadLine());
+            char ch = Char.Parse(Console.ReadLine());
 
-            // Write your codes here.
+            for(int i = 1; i<=n; i++)
+            {
+                for (int j = 1; j <= n; j++)
+                {
+                    if ((i % 2) == 0)
+                        Console.Write($" {ch}");
+                    else
+                        Console.Write($"{ch} ");
+                }
+                Console.WriteLine();
+            }
         }
     }
 }

@@ -15,7 +15,24 @@ namespace CSharp.Assignments.Loop1
         /// </summary>
         public static void Main()
         {
-            // Write your codes here
+            Console.Error.WriteLine("Enter the value of n such that it is greater than/equal to zero");
+            int n = int.Parse(Console.ReadLine());
+
+            for(int i = 1; i<=n ; i++)
+            {
+                int k = n;
+                for (int j = n; j>=1 ; j--)
+                {
+                    int c = j - k;
+                    Console.Write($"{c},");
+                    if (k > (i+1))
+                        k = k-1;
+                    else
+                        k = 0;
+
+                }
+                Console.WriteLine();
+            }
         }
     }
 }
