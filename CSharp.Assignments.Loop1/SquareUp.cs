@@ -21,14 +21,19 @@ namespace CSharp.Assignments.Loop1
             for(int i = 1; i<=n ; i++)
             {
                 int k = n;
-                for (int j = n; j>=1 ; j--)
+                for (int j = n; j >= 1; j--)
                 {
-                    int c = j - k;
-                    Console.Write($"{c},");
-                    if (k > (i+1))
-                        k = k-1;
+                    if (i < n)
+                    {
+                        int c = j - k;
+                        Console.Write($"{c},");
+                        if (k > (i + 1))
+                            k = k - 1;
+                        else
+                            k = 0;
+                    }
                     else
-                        k = 0;
+                        Console.Write($"{j},");
 
                 }
                 Console.WriteLine();
