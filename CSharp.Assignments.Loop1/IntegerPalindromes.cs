@@ -17,8 +17,40 @@ namespace CSharp.Assignments.Loop1
     {
         public static void Main()
         {
-            // enter sentinel inputs
-            // then check the palindrome only once.
+            int c = 0, n,k,rev=0 ;
+            bool ic = true;
+            while(ic)
+            {
+                Console.Error.WriteLine("Enter the value of n such that it is greater than/equal to zero");
+                n = int.Parse(Console.ReadLine());
+                for (; n >= 0; n /= 10)
+                    c = c + 1;
+                if (c != 9)
+                {
+                    Console.WriteLine("Kindly Enter only 9 digit number");
+                    ic = true;
+                }
+                else
+                {
+                    ic = false;
+
+                    k = n;
+
+                    for (; n >= 0; n /= 10)
+                        rev = rev * 10 + (n % 10);
+                    if (rev == k)
+                        Console.WriteLine("Entered number is a Palendrom");
+                    else
+                        Console.WriteLine("Entered number is NOT a Palendrom");
+
+                }
+                    
+            }
+            
+
+
+
+
         }
     }
 }
