@@ -25,7 +25,12 @@ namespace CSharp.Assignments.Loop1
     {
         public static void Main()
         {
-            // read in account number
+            Console.WriteLine("Enter the Account number");
+            int acc = int.Parse(Console.ReadLine());
+            Console.WriteLine("Enter the Balance that was begning of the month");
+            int bal = int.Parse(Console.ReadLine());
+            Console.WriteLine("Enter the Account number");
+            int chr = int.Parse(Console.ReadLine());
             // Enter your sentinel loop here
         }
     }

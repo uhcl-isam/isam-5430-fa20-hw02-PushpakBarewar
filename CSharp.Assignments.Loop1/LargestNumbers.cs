@@ -22,8 +22,11 @@ namespace CSharp.Assignments.Loop1
     {
         public static void Main()
         {
-            // get first number and assign it to variable largest
-            // write your codes here
+            int[] a = new int[10];
+            foreach (int i in a)
+                a[i] = int.Parse(Console.ReadLine());
+
+            
         }
     }
 }
