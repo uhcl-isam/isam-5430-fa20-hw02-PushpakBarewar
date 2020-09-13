@@ -42,43 +42,53 @@ namespace CSharp.Assignments.Loop1
                     for (int i = 1; i <= n; i++)
                     {
                         for (int j = 1; j <= i; j++)
-                                Console.Write("*");
+                            Console.Write('*');
                         Console.WriteLine();
                     }
                     break;
 
                 case 'b':
-                    for (int i = 1; i <= n; i++)
+                    for (int i = n; i != 0; i--)
                     {
-                        for (int j = 1; j <= n; j++)
-                            Console.Write("*");
+                        for (int j = i; j >= 1; j--)
+                            Console.Write('*');
                         Console.WriteLine();
                     }
                     break;
 
                 case 'c':
-                    // code block
+                    int h = n;
+                    for (int i = 1; i <= n; i++)
+                    {
+
+                        for (int j = 1; j <= (i - 1); j++)
+                            Console.Write(' ');
+
+                        for (int k = h; k >= 1; k--)
+                            Console.Write('*');
+                        h = h - 1;
+
+                        Console.WriteLine();
+                    }
                     break;
+
                 case 'd':
-                    // code block
-                    break;
-                default:
-                    // code block
-                    break;
-            }
+                    int l = n;
+                    for (int i = 1; i <= n; i++)
+                    {
 
-            for (int i = 1; i <= n; i++)
-            {
-                for (int j = 1; j <= n; j++)
-                {
-                    if ((i % 2) == 0)
-                        Console.Write("*");
-                    else
-                        Console.Write("*");
-                }
-                Console.WriteLine();
-            }
+                        for (int j = l; j > 1; j--)
+                            Console.Write(' ');
 
+                        for (int k = 1; k <= i; k++)
+                            Console.Write('*');
+                        l = l - 1;
+
+                        Console.WriteLine();
+                    }
+                    break;
+
+            }
         }
     }
 }
