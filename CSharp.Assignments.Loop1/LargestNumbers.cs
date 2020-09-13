@@ -22,7 +22,7 @@ namespace CSharp.Assignments.Loop1
     {
         public static void Main()
         {
-            int number, counter = 0, largest = 0, largest2 = 0;
+            int number, counter, largest = -32768 , largest2 = -32768;
             Console.WriteLine("enter the numbers to be compared");
 
             for (counter = 1; counter <= 10; counter++)
