@@ -36,8 +36,49 @@ namespace CSharp.Assignments.Loop1
             Console.Error.WriteLine("Enter the number of lines.");
             int n = Convert.ToInt32(Console.ReadLine());
 
-            // Write your codes here.
-            Console.ReadLine();
+            switch (t)
+            {
+                case 'a':
+                    for (int i = 1; i <= n; i++)
+                    {
+                        for (int j = 1; j <= i; j++)
+                                Console.Write("*");
+                        Console.WriteLine();
+                    }
+                    break;
+
+                case 'b':
+                    for (int i = 1; i <= n; i++)
+                    {
+                        for (int j = 1; j <= n; j++)
+                            Console.Write("*");
+                        Console.WriteLine();
+                    }
+                    break;
+
+                case 'c':
+                    // code block
+                    break;
+                case 'd':
+                    // code block
+                    break;
+                default:
+                    // code block
+                    break;
+            }
+
+            for (int i = 1; i <= n; i++)
+            {
+                for (int j = 1; j <= n; j++)
+                {
+                    if ((i % 2) == 0)
+                        Console.Write("*");
+                    else
+                        Console.Write("*");
+                }
+                Console.WriteLine();
+            }
+
         }
     }
 }
