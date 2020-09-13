@@ -24,7 +24,7 @@ namespace CSharp.Assignments.Loop1
             for ( ;c < end; )
             {
                 c = a + b;
-                Console.WriteLine(c);
+                Console.WriteLine(c); 
                 a = b;
                 b = c;
             }

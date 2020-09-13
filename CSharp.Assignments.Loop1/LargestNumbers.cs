@@ -22,11 +22,30 @@ namespace CSharp.Assignments.Loop1
     {
         public static void Main()
         {
-            int[] a = new int[10];
-            foreach (int i in a)
-                a[i] = int.Parse(Console.ReadLine());
+            int number, counter = 0, largest = 0, largest2 = 0;
+            Console.WriteLine("enter the numbers to be compared");
 
-            
+            for (counter = 1; counter <= 10; counter++)
+            {
+                number = int.Parse(Console.ReadLine());
+                if (largest < number)
+                {
+                    largest2 = largest;
+                    largest = number;
+                }
+
+                else if (largest2 < number)
+                {
+                    largest2 = number;
+                    //Console.WriteLine("ass");
+                }
+
+
+                Console.WriteLine("Largest Number" +largest);
+                Console.WriteLine("Second Largest" + largest2);
+            }
+
+
         }
     }
 }

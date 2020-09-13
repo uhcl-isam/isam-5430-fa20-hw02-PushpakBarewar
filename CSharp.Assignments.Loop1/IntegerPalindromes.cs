@@ -18,7 +18,7 @@ namespace CSharp.Assignments.Loop1
         public static void Main()
         {
             int c, n, k, rev = 0;
-            bool ic = true;
+            bool ic = true;    
             do
             {
 
@@ -32,7 +32,7 @@ namespace CSharp.Assignments.Loop1
 
                 if (c != 9)
                 {
-                    Console.WriteLine("Kindly Enter only 9 digit number");
+                    Console.Error.WriteLine("Kindly Enter only 9 digit number");
                     ic = true;
                 }
                 else
@@ -44,9 +44,9 @@ namespace CSharp.Assignments.Loop1
                         rev = rev * 10 + (n % 10);
 
                     if (rev == k)
-                        Console.WriteLine("Entered number is a Palendrom");
+                        Console.WriteLine("a palindrome");
                     else
-                        Console.WriteLine("Entered number is NOT a Palendrom");
+                        Console.WriteLine("not a palindrome");
 
                 }
 
