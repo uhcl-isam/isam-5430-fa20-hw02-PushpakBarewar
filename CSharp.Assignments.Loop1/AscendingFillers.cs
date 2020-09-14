@@ -48,7 +48,7 @@ namespace CSharp.Assignments.Loop1
                 filler = 0;
                 string cnn = Console.ReadLine();
                 int cn = Convert.ToInt32(cnn);
-                if (cn < 0)// || ccn == null)
+                if ((cn < 0)|(cnn == null))
                 {
                     break;
                 }
