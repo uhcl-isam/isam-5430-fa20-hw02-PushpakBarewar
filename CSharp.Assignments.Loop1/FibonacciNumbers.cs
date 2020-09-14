@@ -18,6 +18,7 @@ namespace CSharp.Assignments.Loop1
             int end = int.Parse(Console.ReadLine());
             
             int a = 0, b = 1, c=0;
+            if()
             Console.WriteLine(a);
             Console.WriteLine(b);
             
