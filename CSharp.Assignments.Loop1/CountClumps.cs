@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -16,23 +16,34 @@ namespace CSharp.Assignments.Loop1
     {
         public static void Main()
         {
-            Console.WriteLine("Enter the values:");
-            int c = 0;
-            string s;
-            do
+            Console.Error.WriteLine("Enter the numbers");
+            string readline = Console.ReadLine();
+            int n1 = Convert.ToInt32(readline);
+            int c1 = 0, c2 = 0,count =1;
+            while (readline != null)
             {
-                s = Console.ReadLine();
-                int t = Convert.ToInt32(s);
-                int t1 =-32768;
-                if (t == t1)
-                    c += 1;
+                string s = Console.ReadLine();
+                if (s == null)
+                {
+                    if (c2 > 0)
+                        c1 += 1;
+                    break;
+                }
+                   
+                int n2 = Convert.ToInt32(s);
+                if (n1 == n2)
+                    c2 += 1;
                 else
-                    t1 = t;
-
-
-            } while (s!=null);
-
-            Console.WriteLine(c);
+                {
+                    n1 = n2;
+                    if (c2 > 0)
+                    {
+                        c1 += 1;
+                        c2 = 0;
+                     }      
+                 }
+             }
+            Console.WriteLine(c1);
         }
     }
 }
