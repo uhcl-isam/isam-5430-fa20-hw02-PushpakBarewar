@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using static System.Console;
 namespace CSharp.Assignments.Loop1
 {
@@ -25,13 +25,38 @@ namespace CSharp.Assignments.Loop1
     {
         public static void Main()
         {
-            Console.WriteLine("Enter the Account number");
-            int acc = int.Parse(Console.ReadLine());
-            Console.WriteLine("Enter the Balance that was begning of the month");
-            int bal = int.Parse(Console.ReadLine());
-            Console.WriteLine("Enter the Account number");
-            int chr = int.Parse(Console.ReadLine());
-            // Enter your sentinel loop here
+            int accnumber;
+            int beginningbalance, totalcharges, totalcredits, creditlimit, accountbalance;
+            Write("Enter Account Number: ");
+            accnumber = int.Parse(Console.ReadLine());
+
+            while(accnumber>0)
+            {
+                Write("Enter Balance at begining of the month: ");
+                beginningbalance = int.Parse(Console.ReadLine());
+                Write("Enter total of all items charged by the customer this month: ");
+                totalcharges = int.Parse(Console.ReadLine());
+                Write("Enter total of all credits applied to the customer’s account this month: ");
+                totalcredits = int.Parse(Console.ReadLine());
+                Write("Enter Credit Limit: ");
+                creditlimit = int.Parse(Console.ReadLine());
+
+                accountbalance = beginningbalance + totalcharges - totalcredits;
+
+                WriteLine($"New Account Balance: {accountbalance}");
+
+                if (accountbalance>creditlimit)
+                {
+                    WriteLine("Credit limit Exceeded");
+                }
+                else
+                {
+                    WriteLine($"Account Number:{accnumber}");
+                    WriteLine("Enter Account Number: ");
+                    accnumber = int.Parse(Console.ReadLine());
+                }
+
+            }
         }
     }
 }
